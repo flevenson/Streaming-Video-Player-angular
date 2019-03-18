@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+p {
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  margin:0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 100px 1fr;
+  background-color: #D2C9C1;
+}
+
+header {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  background-color: #2e457E;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+  box-shadow: 0px 2px 4px #00000078;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-left: 20px;
+  color: #43A9FE;
+  font-family: 'Lobster', cursive;
+}
+
+.vidIcon {
+  height: 50px;
+}
+
+main {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+aside {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
