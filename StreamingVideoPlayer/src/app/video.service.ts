@@ -9,8 +9,8 @@ export class VideoService {
 
   constructor() { }
 
-  attachVideo(): void {
-    let video = new Video(
+  attachVideo(): Video {
+    let newVideo = new Video(
       document.querySelector('.video-main'),
       document.querySelector('.current-time'),
       document.querySelector('.progress-fg'),
@@ -21,5 +21,6 @@ export class VideoService {
       document.querySelector('.draggable-circle'),
       false
     )
+    return newVideo
   }
 }

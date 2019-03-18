@@ -10,11 +10,17 @@ import { VideoService } from '../video.service'
 export class VideoComponent implements OnInit {
 
   video: Video;
+  videos: Video[];
 
-  constructor(private VideoService: VideoService ) { }
+  constructor(private VideoService: VideoService ) {
+    this.videos = []
+   }
 
-  ngOnInit() {
-    this.VideoService.attachVideo();
+
+  ngOnInit() {  
+    this.videos.push(this.VideoService.attachVideo());
   }
+
+  
 
 }
