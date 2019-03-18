@@ -1,0 +1,52 @@
+.video-list {
+  background-color: #CECECE;
+  height: 400px;
+  width: 90%;
+  margin-top: 50px;
+  box-shadow: 0 0 7px 1px #00000075
+}
+
+.playlist-header {
+  height: 65px;
+  background-color: #4A5B63;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+h2 {
+  color: #43A9FE;
+  font-size: 2rem;
+  margin-left: 10px;
+  font-family: 'Lobster', cursive;
+}
+
+.playlist-icon {
+  height: 30px;
+}
+
+.video-option-1, .video-option-2 {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.video-option-1 {
+  background-color: #FCFEFC;
+}
+
+.still-frame {
+  height: 50px;
+}
+
+.video-option-2 {
+  background-color: #E5E5E5;
+}
+
+.arte-china-still {
+  margin-right: 35px;
+}

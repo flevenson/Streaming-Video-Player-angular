@@ -1,3 +1,29 @@
-<p>
-  video works!
-</p>
+<div class="video-holder">
+  <video class="video-main" ></video>
+  <div class="video-controls">
+    <button class="play-btn" (click)='togglePlaying()'>
+      <img class="play-icon" src="./assets/play-sign.svg" alt="play icon">
+    </button>
+    <div class="progress-bg">
+      <img class="draggable-circle" src="assets/circle.svg" alt="draggable-circle">
+      <div class="progress-fg"></div>
+    </div>
+    <p class="current-time">0:00</p>
+    <p class="slash">/</p>
+    <p class="duration">0:00</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    if(Hls.isSupported()) {
+      console.log('supported')
+      let hls = new Hls();
+      hls.attachMedia(document.querySelector('.video-main'));
+      hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+        console.log("video and hls.js are now bound together !");
+        hls.loadSource("https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8");
+        hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+          console.log("manifest loaded, found " + data.levels.length + " quality level");
+        });
+      });
+    }
+  </script>
