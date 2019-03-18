@@ -1,4 +1,5 @@
 export class Video {
+
   constructor(
     public video: HTMLVideoElement,
     public vidCurrentTime: HTMLParagraphElement,
@@ -19,4 +20,5 @@ export class Video {
       this.draggableCircle = draggableCircle;
       this.isDragging = isDragging;
   }
+
 }
